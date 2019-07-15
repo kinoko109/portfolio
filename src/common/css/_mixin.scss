@@ -1,0 +1,67 @@
+@import '_var.scss';
+
+
+// *********
+// media query
+// *********
+@mixin bpSp {
+    @media screen and (max-width: ($sp)) {
+        @content;
+    }
+}
+
+
+// *********
+// position
+// *********
+@mixin wh-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform : translate(-50%,-50%);
+  }
+
+@mixin pseudoElement ($w: 0, $h: 0) {
+    position: absolute;
+    display: block;
+    content: "";
+    width: $w;
+    height: $h;
+}
+
+// *********
+// flex center
+// *********
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+// *********
+// flex right
+// *********
+@mixin flex-right {
+    display: flex;
+    justify-content: flex-end;
+}
+
+// *********
+// btn hover
+// *********
+@mixin hover-to_right {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+}
+@mixin hover-to_left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+}
+@mixin btn-hover {
+    background: linear-gradient(45deg, #d3f169 0.5em, transparent 0.5em) 0 0/1em 1em, linear-gradient(-45deg, #d3f169 0.5em, transparent 0.5em) 0 0/1em 1em;
+    color: #8769f1;
+}

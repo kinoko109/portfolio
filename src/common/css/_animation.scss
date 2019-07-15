@@ -1,0 +1,15 @@
+.m-anime {
+    opacity: 0;
+    transition: all .5s ease;
+    transition-delay: .5s;
+    &.scale-up {
+        transform: scale(.5);
+    }
+    &.move-up {
+        transform: translateY(30%);
+    }
+    &.is-active {
+        opacity: 1;
+        transform: none;
+    }
+}

@@ -1,0 +1,51 @@
+@import '_var.scss';
+@import '_mixin.scss';
+
+.content-top {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+// *********
+// titile lv1
+// *********
+.top-ttl {
+    @include wh-center;
+    // overflow: hidden;
+}
+
+.top-ttl-lv1 {
+    .top-ttl-txt {
+        font-size: 12vw;
+        font-weight: bold;
+        letter-spacing: 0.15em;
+    }
+    .read-txt {
+        font-size: 2.5vw;
+        margin-left: 0.4em;
+    }
+}
+
+.content-top_scroll {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    writing-mode: vertical-rl;
+    cursor: pointer;
+    span::after {
+        @include pseudoElement(0, 100%);
+        border: 1px solid $subColor2;
+        animation: scrlBounce 1s infinite ease-in-out;
+    }
+}
+
+@keyframes scrlBounce {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+}

@@ -1,0 +1,88 @@
+@import '_var.scss';
+@import '_mixin.scss';
+
+// *********
+// about
+// *********
+.about-2col {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    @include bpSp {
+        flex-direction: column;
+    }
+}
+.about-maintext {
+    width: 60%;
+    margin-right: 4%;
+    @include bpSp {
+        width: 90%;
+        text-align: left;
+        margin-right: 0;
+    }
+}
+.aboutme-img {
+    width: 40%;
+    box-shadow: 0 0 50px -25px $subColor2;
+    @include bpSp {
+        width: 90%;
+        margin-top: 8%;
+    }
+}
+.about-3col {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5%;
+    @include bpSp {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+.about-item {
+    width: 30%;
+    @include bpSp {
+        width: 100%;
+        margin-top: 10%;
+    }
+
+}
+.about-subttl {
+    text-align: center;
+    margin-bottom: 13px;
+    font-size: 1.8em;
+    @include bpSp {
+        font-size: 1.2em;
+    }
+}
+.about-img {
+    width: 40%;
+    margin: 0 auto;
+    @include bpSp {
+        width: 36%;
+    }
+}
+.about-item_text {
+    text-align: left;
+    line-height: 1.75;
+}
+.fa-html5 {
+    color: #f16529;
+}
+.fa-css3-alt {
+    color: #007db7;
+}
+.fa-js-square {
+    color: #f0db4f;
+}
+.fa-gulp {
+    color: #ee4846;
+}
+.fa-sass {
+    color: #cf649a;
+}
+.fa-vuejs {
+    color: #41b883;
+}
+.fa-php {
+    color: #8892bf;
+}

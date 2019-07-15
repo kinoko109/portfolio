@@ -1,0 +1,74 @@
+@import '_var.scss';
+@import '_mixin.scss';
+
+// *********
+// header
+// *********
+.l-header {
+    position: fixed;
+    width: 100%;
+    z-index: 20;
+    text-align: center;
+}
+
+.nav {
+    display: flex;
+    justify-content: flex-end;
+    .nav-list {
+        display: flex;
+        .nav-item {
+            margin-right: 2px;
+            @include bpSp {
+                margin-right: 0;
+            }
+        }
+        .nav-item a {
+            display: block;
+            padding: 10px 26px;
+            font-weight: bold;
+        }
+    }
+}
+
+.header-btn{
+    height: 50px;
+    width: 50px;
+    margin: 0 20px 0px auto;
+    a {
+        position: relative;
+        display: block;
+        width: inherit;
+        height: inherit;
+        text-indent: -9999px;
+    }
+    .header-icon {
+        @include pseudoElement;
+        width: inherit;
+        height: 2px;
+        top: 13px;
+        top: 10px;
+        transition: .2s;
+        &::after {
+            @include pseudoElement;
+            width: inherit;
+            height: 2px;
+            top: 26px;
+            transition: .2s;
+        }
+        &.bgB::before,
+        &.bgB::after {
+            background-color: $black;
+        }
+    }
+    &.is-open {
+        transform: rotate(360deg);
+        .header-icon {
+            transform: translate(0, 15px) rotate(-50deg);
+            transition: .2s;
+        }
+        ::after {
+            transform: translate(0, -25px) rotate(95deg);
+            transition: .2s;
+        }
+    }
+}
