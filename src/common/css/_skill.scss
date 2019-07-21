@@ -8,17 +8,31 @@
 .skill-2col {
     display: flex;
     flex-wrap: wrap;
+    &.fa-ul {
+        // webフォントCSS上書き
+        margin: 0;
+    }
     .skill-item {
         width: 50%;
         display: flex;
         align-items: center;
     }
+    .skill-item:nth-child(n+3) {
+        margin-top: 10px;
+    }
     .skill-thumb {
         display: flex;
         flex-direction: column;
         align-items: center;
+        width: 100px;
+        @include bpSp {
+            width: auto;
+        }
     }
     .skill-text {
+        width: 100%;
         margin-left: 2%;
+        padding-right: 35px;
+        text-align: left;
     }
 }
