@@ -4,6 +4,16 @@
 // *********
 // about
 // *********
+.about-me,
+.about-thought {
+    margin-bottom: 7.5%;
+}
+.about-me .ttl-lv3 {
+    margin-bottom: 4.5%;
+    @include bpSp {
+        margin-bottom: 4%;
+    }
+}
 .about-2col {
     display: flex;
     justify-content: space-around;
@@ -16,9 +26,9 @@
     width: 60%;
     margin-right: 4%;
     @include bpSp {
-        width: 90%;
+        width: 100%;
         text-align: left;
-        margin-right: 0;
+        margin: 0 0 3%;
     }
 }
 .aboutme-img {
@@ -26,13 +36,17 @@
     box-shadow: 0 0 50px -25px $subColor2;
     @include bpSp {
         width: 90%;
-        margin-top: 8%;
+    }
+}
+.about-thought .ttl-lv3{
+    margin-bottom: 4.5%;
+    @include bpSp {
+        margin-bottom: 0;
     }
 }
 .about-3col {
     display: flex;
     justify-content: space-between;
-    margin: 5% 0 5% 0;
     @include bpSp {
         flex-direction: column;
         align-items: center;
@@ -40,9 +54,13 @@
 }
 .about-item {
     width: 30%;
+    &:nth-child(n+2) {
+        @include bpSp {
+            margin-top: 3%;
+        }
+    }
     @include bpSp {
         width: 100%;
-        margin-top: 10%;
     }
 
 }
@@ -50,8 +68,9 @@
     text-align: center;
     margin-bottom: 13px;
     font-size: 1.8em;
+    font-weight: bold;
     @include bpSp {
-        font-size: 1.2em;
+        font-size: 1.4em;
     }
 }
 .about-img {

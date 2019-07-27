@@ -2,6 +2,12 @@
 @import '_mixin.scss';
 @import '_btn.scss';
 
+.pc {
+    display: block;
+    @include bpSp {
+        display: none;
+    }
+}
 
 body {
     position: relative;
@@ -24,6 +30,9 @@ body {
     max-width: 1200px;
     width: 90%;
     margin: 0 auto;
+    @include bpSp {
+        width: 87.5%;
+    }
 }
 
 
@@ -45,12 +54,14 @@ body {
 
 .ttl-lv2 {
     position: relative;
-    width: 200px;
+    width: 300px;
     margin: 0 auto 5%;
-    font-size: 45px;
+    font-size: 4rem;
     letter-spacing: 4px;
     text-align: center;
     @include bpSp {
+        width: 200px;
+        font-size: 2.7rem;
         margin: 0 auto 12%;
     }
     &::after {
@@ -81,11 +92,27 @@ body.darkmode {
 // *********
 // common
 // *********
+.ttl-lv3 span {
+    font-size: 1.8em;
+    color: #fdb2a1;
+}
 .about-sec,
 .work-sec{
-    margin-top: 7%;
+    margin-bottom: 10%;
     @include bpSp {
-        margin-top: 10%;
+        margin-bottom: 10%;
+    }
+}
+.about {
+    &-me .ttl-lv3,
+    &-thought .ttl-lv3,
+    &-skill .ttl-lv3{
+        font-size: 1.9em;
+        margin-bottom: 10%;
+        letter-spacing: 0.25em;
+        @include bpSp {
+            font-size: 1.25em;
+        }
     }
 }
 
