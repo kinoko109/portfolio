@@ -28,7 +28,8 @@
 
 @media screen and (max-width: 767px) {
   .nav .nav-list .nav-item {
-    margin-right: 0;
+    width: 90px;
+    margin: 10px 0 0;
   }
 }
 
@@ -37,6 +38,13 @@
   padding: 15px 0;
   font-size: 18px;
   font-weight: bold;
+}
+
+@media screen and (max-width: 767px) {
+  .nav .nav-list .nav-item a {
+    padding: 5px 0;
+    font-size: 14px;
+  }
 }
 
 .header-btn {
@@ -104,14 +112,14 @@
 }
 
 .t-btn-area {
-  position: fixed;
-  top: 2%;
+  position: absolute;
+  top: 15px;
   left: 2%;
 }
 
 @media screen and (max-width: 767px) {
   .t-btn-area {
-    top: 5%;
+    top: 33%;
   }
 }
 
@@ -572,6 +580,7 @@ body.darkmode .to-scroll span::after {
 }
 
 .work-item a figure {
+  margin-bottom: 3%;
   overflow: hidden;
 }
 

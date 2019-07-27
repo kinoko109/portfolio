@@ -19,7 +19,8 @@
         .nav-item {
             width: 110px;
             @include bpSp {
-                margin-right: 0;
+                width: 90px;
+                margin: 10px 0 0;
             }
         }
         .nav-item a {
@@ -27,6 +28,10 @@
             padding: 15px 0;
             font-weight: bold;
             font-size: 18px;
+            @include bpSp {
+                font-size: 14px;
+                padding: 5px 0;
+            }
         }
     }
 }
@@ -74,11 +79,11 @@
     }
 }
 .t-btn-area {
-    position: fixed;
-    top: 2%;
+    position: absolute;
+    top: 15px;
     left: 2%;
     @include bpSp {
-        top: 5%;
+        top: 33%;
     }
 }
 .t-btn {
