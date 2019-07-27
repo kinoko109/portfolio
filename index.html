@@ -18,28 +18,25 @@
     <script src="./js/top.js"></script>
     <!-- <script src="./common/js/disp_include_html.js"></script> -->
 </head>
-<body class="">
+<body>
     <header id="header" class="l-header">
         <!-- <div class="header-btn">
             <a href="javascript:void(0)">nav<span class="header-icon bgB"></span></a>
         </div> -->
-        <div>
-            <ul>
-                <li data-color="black" class="select-black"></li>
-                <li data-color="white" class="select-white"></li>
-            </ul>
+        <div class="t-btn-area">
+            <button class="t-btn dark js-darkbtn" title="暗い色"></button>
+            <button class="t-btn light js-lightbtn" title="明るい色"></button>
         </div>
         <nav class="nav">
             <ul class="nav-list">
                 <li class="nav-item"><a href="#" class="btn">HOME</a></li>
                 <li class="nav-item"><a href="#about" class="btn">ABOUT</a></li>
                 <li class="nav-item"><a href="#work" class="btn">WORK</a></li>
-                <!-- <li class="l-nav_item"><a href="" class="btn">CONTACT</a></li> -->
             </ul>
         </nav>
     </header>
 
-    <main>
+    <main class="wrap">
         <section class="content-top">
             <div class="top-ttl">
                 <h1 class="top-ttl-lv1 m-anime scale-up"><span class="top-ttl-txt">Portfolio</span>
@@ -50,92 +47,88 @@
                 <!-- <div class="split-box bgSub1"></div>
                 <div class="split-box bgSub2"></div> -->
             </div>
-            <p class="content-top_scroll"><a href="#about"><span>scroll</span></a></p>
+            <p class="to-scroll"><a href="#about"><span>scroll</span></a></p>
         </section>
 
-        <div class="wrap">
             <section id="about" class="about-sec">
-                <div class="sub-ttl">
-                    <h2 class="ttl-lv2 m-anime move-up">about</h2>
-                </div>
-                <div class="about-2col m-anime move-up">
-                    <div class="about-maintext">
+                <h2 class="ttl-lv2 m-anime move-up">about</h2>
+                <div class="about-2col">
+                    <div class="about-maintext m-anime move-up">
                         <p>2018年4月に新卒未経験で都内web制作会社に入社。<br>
                             HTML5、CSS3、JavaScriptを使用し、主にブランディングサイトやキャンペーンサイト、コーポレートサイトの制作に携わりました。<br>
                             また、PHPとSQLを用いたお問い合わせフォームと簡易的な管理画面の制作の経験もあります。<br>
                             CMSではMovable Typeを使用し、コーポレートサイトとブランディングサイトの制作を経験してきました。
                         </p>
                     </div>
-                    <div class="aboutme-img">
+                    <div class="aboutme-img m-anime move-up">
                         <img src="./img/IMG_6872.JPG" alt="tatsuaki.matuoka">
                     </div>
                 </div>
                 <div class="about-3col m-anime move-up">
-                    <div class="about-item">
+                    <div class="about-item m-anime move-up">
                         <div class="about-img">
                             <img src="./img/about-item01.png" alt="">
                         </div>
                         <h3 class="about-subttl">STUDY</h3>
-                        <p class="about-item_text">新しい言語やツール、フレームワークなどを学習する際は仕組みを知ることが重要だと考えています。そして仕組みを知ったうえで動かしてアウトプットするという流れが今後の成長につながると確信しています。</p>
+                        <p class="about-item_text">新しい言語やツール、フレームワークなどを学習する際は仕組みを知ることが重要だと考えています。そして仕組みをインプットしたうえでアウトプットするという流れが応用まで理解でき、今後の成長につながると確信しています。</p>
                     </div>
-                    <div class="about-item">
+                    <div class="about-item m-anime move-up">
                         <div class="about-img">
                             <img src="./img/about-item02.png" alt="">
                         </div>
                         <h3 class="about-subttl">STORY</h3>
                         <p class="about-item_text">小説や漫画、映画、アニメなど物語性を感じるコンテンツが大好きです。物語は豊かな感情を得ることができ、また与えることができます。今後も多くの物語に触れユーザーに豊かな影響を与えられるコンテンツやサービスを生み出していきたいと考えています。</p>
                     </div>
-                    <div class="about-item">
+                    <div class="about-item m-anime move-up">
                         <div class="about-img">
                             <img src="./img/about-item03.png" alt="">
                         </div>
                         <h3 class="about-subttl">CLOTHES</h3>
                         <p class="about-item_text">大学生の時から古着に興味を持ち、大学2年生の春には友人と服飾サークルを立ち上げ様々な場所に足を運び、多くの人と交流しました。ファッションは人によって形や色などその人が持っているデザインを現わす一つの要素だと考えています。これからも色々なデザインを見て、学び、プロダクトに落とし込んでいけるようにしたいと思っています。</p>
                     </div>
-
                 </div>
                 <div>
                     <h3>skill</h3>
-                    <ul class="skill-2col fa-ul m-anime move-up">
-                        <li class="skill-item fa-li">
+                    <ul class="skill-2col fa-ul">
+                        <li class="skill-item fa-li m-anime move-up">
                             <div class="skill-thumb">
                                 <i class="fab fa-html5 fa-4x"></i>
-                                <p>HTML5</p>
+                                <p class="bold">HTML5</p>
                             </div>
-                            <p class="skill-text">ただコードを書くのではなく、構造を考慮しながらセマンティックなHTMLコードを書き続けます。</p>
+                            <p class="skill-text">ただコードを書くのではなく、構造を考慮しながらセマンティックなHTMLコードを書き続けたいと考えています。</p>
                         </li>
-                        <li class="skill-item fa-li">
+                        <li class="skill-item fa-li m-anime move-up">
                             <div class="skill-thumb">
                                 <i class="fab fa-css3-alt fa-4x"></i>
-                               <p>CSS3</p>
+                               <p class="bold">CSS3</p>
                             </div>
                             <p class="skill-text">どのようなデザインでもブラウザ上で表現できるように、かつメンテナンス性を考慮したCSS設計やCSSアニメーションを使用したインタラクティブな表現にもつとめます。</p>
                         </li>
-                        <li class="skill-item fa-li">
+                        <li class="skill-item fa-li m-anime move-up">
                             <div class="skill-thumb">
                                 <i class="fab fa-js-square fa-4x"></i>
-                                <p>JavaScript</p>
+                                <p class="bold">JavaScript</p>
                             </div>
                             <p class="skill-text">常に最新のJavaScriptの情報にアンテナを張るように心がけています。</p>
                         </li>
-                        <li class="skill-item fa-li">
+                        <li class="skill-item fa-li m-anime move-up">
                             <div class="skill-thumb">
                                 <i class="fab fa-gulp fa-4x"></i>
-                                <p>gulp</p>
+                                <p class="bold">gulp</p>
                             </div>
-                            <p class="skill-text">業務効率化を図り、プライベートでgulpを学習し、実際に導入しました。</p>
+                            <p class="skill-text">業務効率化を図り、プライベートでgulpを学習し、実際に業務に導入しています。</p>
                         </li>
-                        <li class="skill-item fa-li">
+                        <li class="skill-item fa-li m-anime move-up">
                             <div class="skill-thumb">
                                 <i class="fab fa-sass fa-4x"></i>
-                                <p>Sass</p>
+                                <p class="bold">Sass</p>
                             </div>
-                            <p class="skill-text">Sassを使用し、CSSのコーディング効率化を図っています。<br>まだまだSassの機能を活かしけれていない部分があるので、用途に合わせもっと効率の良いコーディングをできるよう学習していきます。</p>
+                            <p class="skill-text">Sassを使用し、CSSのコーディング効率化を図っています。</p>
                         </li>
-                        <li class="skill-item fa-li">
+                        <li class="skill-item fa-li m-anime move-up">
                             <div class="skill-thumb">
                                 <i class="fab fa-vuejs fa-4x"></i>
-                                <p>Vue.js</p>
+                                <p class="bold">Vue.js</p>
                             </div>
                             <p class="skill-text">フレームワークであるVue.jsをプライベートで学習中です。</p>
                         </li>
@@ -143,14 +136,37 @@
                 </div>
             </section>
             <section id="work" class="work-sec">
-                <div class="sub-ttl">
                     <h2 class="ttl-lv2 m-anime move-up">work</h2>
-                </div>
+                    <p class="txtC mgb3">これまでに携わってきたサイトをピックアップし、掲載します。</p>
                 <div>
-                    <p>comming soon...</p>
+                    <ul class="work-2col">
+                        <li class="work-item m-anime move-up">
+                            <a href="https://gazoo.com/U-Car/" target="_blank">
+                                <figure><img src="./img/work_gazoo_img.png" alt="TOYOTA Gazoo中古車のサイトの写真"></figure>
+                                <span class="work-text">HTML5/CSS3/jQuery</span>
+                            </a>
+                        </li>
+                        <li class="work-item m-anime move-up">
+                            <a href="https://www.toyotaconnected.co.jp/" target="_blank">
+                                <figure><img src="./img/work_toyotaconected_img.png" alt="TOYOTA Conectedのサイトの写真"></figure>
+                                <span class="work-text">HTML5/CSS3/jQuery</span>
+                            </a>
+                        </li>
+                        <li class="work-item m-anime move-up">
+                            <a href="https://www.j-motto.co.jp/" target="_blank">
+                                <figure><img src="./img/work_j-motto_img.png" alt="j-motoのサイトの写真"></figure>
+                                <span class="work-text">HTML5/CSS3/jQuery/WordPress</span>
+                            </a>
+                        </li>
+                        <li class="work-item m-anime move-up">
+                            <a href="http://www.jcbtravel.co.jp/" target="_blank">
+                                <figure><img src="./img/work_jcb_img.png" alt="JCBトラベルのサイトの写真"></figure>
+                                <span class="work-text">HTML5/CSS3/jQuery/Movable Type7</span>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </section>
-        </div>
     </main>
 
 

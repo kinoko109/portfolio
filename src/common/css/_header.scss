@@ -17,15 +17,16 @@
     .nav-list {
         display: flex;
         .nav-item {
-            margin-right: 2px;
+            width: 110px;
             @include bpSp {
                 margin-right: 0;
             }
         }
         .nav-item a {
             display: block;
-            padding: 10px 26px;
+            padding: 15px 0;
             font-weight: bold;
+            font-size: 18px;
         }
     }
 }
@@ -71,4 +72,28 @@
             transition: .2s;
         }
     }
+}
+.t-btn-area {
+    position: fixed;
+    top: 2%;
+    left: 2%;
+    @include bpSp {
+        top: 5%;
+    }
+}
+.t-btn {
+    width: 25px;
+    height: 25px;
+    @include bpSp {
+        width: 18px;
+        height: 18px;
+    }
+}
+.dark {
+    background-color: #000;
+    border: 1px solid #fff;
+}
+.light {
+    background-color: #fff;
+    border: 1px solid #000;
 }

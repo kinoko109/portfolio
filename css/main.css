@@ -23,7 +23,7 @@
 }
 
 .nav .nav-list .nav-item {
-  margin-right: 2px;
+  width: 110px;
 }
 
 @media screen and (max-width: 767px) {
@@ -34,7 +34,8 @@
 
 .nav .nav-list .nav-item a {
   display: block;
-  padding: 10px 26px;
+  padding: 15px 0;
+  font-size: 18px;
   font-weight: bold;
 }
 
@@ -102,12 +103,59 @@
   transition: .2s;
 }
 
+.t-btn-area {
+  position: fixed;
+  top: 2%;
+  left: 2%;
+}
+
+@media screen and (max-width: 767px) {
+  .t-btn-area {
+    top: 5%;
+  }
+}
+
+.t-btn {
+  width: 25px;
+  height: 25px;
+}
+
+@media screen and (max-width: 767px) {
+  .t-btn {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.dark {
+  border: 1px solid #fff;
+  background-color: #000;
+}
+
+.light {
+  border: 1px solid #000;
+  background-color: #fff;
+}
+
 body {
+  -webkit-transition: .3s;
   position: relative;
+  transition: .3s;
 }
 
 body.bgSub3 {
   background-color: black;
+}
+
+body.darkmode {
+  -webkit-transition: .3s;
+  background-color: #000;
+  color: #fff;
+  transition: .3s;
+}
+
+body.darkmode a {
+  color: #fff;
 }
 
 .wrap {
@@ -116,23 +164,19 @@ body.bgSub3 {
   margin: 0 auto;
 }
 
-.sub-ttl {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-          justify-content: center;
-  width: 100%;
-  margin-bottom: 8%;
-  overflow: hidden;
+.ttl-lv2 {
+  position: relative;
+  width: 200px;
+  margin: 0 auto 5%;
+  font-size: 45px;
+  letter-spacing: 4px;
   text-align: center;
 }
 
-.ttl-lv2 {
-  position: relative;
-  font-size: 45px;
-  letter-spacing: 4px;
+@media screen and (max-width: 767px) {
+  .ttl-lv2 {
+    margin: 0 auto 12%;
+  }
 }
 
 .ttl-lv2::after {
@@ -152,16 +196,28 @@ body.bgSub3 {
   position: absolute;
   bottom: -5px;
   width: 100%;
-  height: 10px;
+  height: 5px;
+  border-radius: 10px;
   background-color: #000;
   content: "";
   transition: .6s;
           transition-delay: 1s;
 }
 
+body.darkmode .ttl-lv2.draw-line::after {
+  background-color: #fff;
+}
+
 .about-sec,
 .work-sec {
   margin-top: 7%;
+}
+
+@media screen and (max-width: 767px) {
+  .about-sec,
+  .work-sec {
+    margin-top: 10%;
+  }
 }
 
 .bgW {
@@ -205,7 +261,7 @@ body.bgSub3 {
   font-size: 2.5vw;
 }
 
-.content-top_scroll {
+.to-scroll {
   -webkit-writing-mode: vertical-rl;
       -ms-writing-mode: tb-rl;
   position: absolute;
@@ -215,15 +271,25 @@ body.bgSub3 {
           writing-mode: vertical-rl;
 }
 
-.content-top_scroll span::after {
-  -webkit-animation: scrlBounce 1s infinite ease-in-out;
+@media screen and (max-width: 767px) {
+  .to-scroll {
+    bottom: 37px;
+  }
+}
+
+.to-scroll span::after {
+  -webkit-animation: scrlBounce 1.3s infinite ease-in-out;
   display: block;
   position: absolute;
   width: 0;
   height: 100%;
-  border: 1px solid #434C46;
-          animation: scrlBounce 1s infinite ease-in-out;
+  border: 1px solid #000;
+          animation: scrlBounce 1.3s infinite ease-in-out;
   content: "";
+}
+
+body.darkmode .to-scroll span::after {
+  border-color: #fff;
 }
 
 @-webkit-keyframes scrlBounce {
@@ -233,8 +299,8 @@ body.bgSub3 {
             transform: translateY(0);
   }
   50% {
-    -webkit-transform: translateY(10px);
-            transform: translateY(10px);
+    -webkit-transform: translateY(5px);
+            transform: translateY(5px);
   }
 }
 
@@ -245,8 +311,8 @@ body.bgSub3 {
             transform: translateY(0);
   }
   50% {
-    -webkit-transform: translateY(10px);
-            transform: translateY(10px);
+    -webkit-transform: translateY(5px);
+            transform: translateY(5px);
   }
 }
 
@@ -348,7 +414,7 @@ body.bgSub3 {
 
 @media screen and (max-width: 767px) {
   .about-img {
-    width: 36%;
+    width: 32%;
   }
 }
 
@@ -393,6 +459,15 @@ body.bgSub3 {
       flex-wrap: wrap;
 }
 
+@media screen and (max-width: 767px) {
+  .skill-2col {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .skill-2col.fa-ul {
   margin: 0;
 }
@@ -404,11 +479,33 @@ body.bgSub3 {
   display: -ms-flexbox;
   display: flex;
           align-items: center;
-  width: 50%;
+  width: 45%;
+}
+
+@media screen and (max-width: 767px) {
+  .skill-2col .skill-item {
+    width: 100%;
+  }
+}
+
+.skill-2col .skill-item:nth-child(even) {
+  margin-left: auto;
+}
+
+@media screen and (max-width: 767px) {
+  .skill-2col .skill-item:nth-child(even) {
+    margin-left: 0;
+  }
 }
 
 .skill-2col .skill-item:nth-child(n+3) {
   margin-top: 10px;
+}
+
+@media screen and (max-width: 767px) {
+  .skill-2col .skill-item:nth-child(n+2) {
+    margin-top: 3.5%;
+  }
 }
 
 .skill-2col .skill-thumb {
@@ -425,17 +522,73 @@ body.bgSub3 {
   width: 100px;
 }
 
-@media screen and (max-width: 767px) {
-  .skill-2col .skill-thumb {
-    width: auto;
-  }
-}
-
 .skill-2col .skill-text {
   width: 100%;
   margin-left: 2%;
-  padding-right: 35px;
   text-align: left;
+}
+
+@media screen and (max-width: 767px) {
+  .skill-2col .skill-text {
+    padding-right: 0;
+  }
+}
+
+.skill-2col .fa-li {
+  left: 0;
+}
+
+.work-2col {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+  -ms-flex-wrap: wrap;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+      flex-wrap: wrap;
+          justify-content: space-between;
+  width: 100%;
+}
+
+@media screen and (max-width: 767px) {
+  .work-2col {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.work-2col .work-item {
+  width: 46%;
+  margin-bottom: 5%;
+}
+
+@media screen and (max-width: 767px) {
+  .work-2col .work-item {
+    width: 100%;
+    margin-bottom: 12%;
+  }
+}
+
+.work-item a figure {
+  overflow: hidden;
+}
+
+.work-item a img {
+  -webkit-transition: 0.3s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+  transition: 0.3s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+}
+
+.work-item a:hover img {
+  -webkit-transition: 0.3s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  transition: 0.3s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+}
+
+.work-text {
+  width: 100%;
 }
 
 .m-anime {

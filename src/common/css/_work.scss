@@ -1,0 +1,39 @@
+@import '_var.scss';
+@import '_mixin.scss';
+
+.work-2col {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    @include bpSp {
+        flex-direction: column;
+    }
+    .work-item {
+        width: 46%;
+        margin-bottom: 5%;
+        @include bpSp {
+            width: 100%;
+            margin-bottom: 12%;
+        }
+    }
+}
+.work-item {
+    a {
+        figure {
+            overflow: hidden;
+        }
+        img {
+            transition: .3s cubic-bezier(.55, .085, .68, .53);
+        }
+        &:hover {
+            img {
+                transition: .3s cubic-bezier(.55, .085, .68, .53);
+                transform: scale(1.05);
+            }
+        }
+    }
+}
+.work-text {
+    width: 100%;
+}

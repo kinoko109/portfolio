@@ -8,17 +8,34 @@
 .skill-2col {
     display: flex;
     flex-wrap: wrap;
+    @include bpSp {
+        flex-direction: column;
+    }
     &.fa-ul {
         // webフォントCSS上書き
         margin: 0;
     }
     .skill-item {
-        width: 50%;
+        width: 45%;
         display: flex;
         align-items: center;
+        @include bpSp {
+            width: 100%;
+        }
+    }
+    .skill-item:nth-child(even) {
+        margin-left: auto;
+        @include bpSp {
+            margin-left: 0;
+        }
     }
     .skill-item:nth-child(n+3) {
         margin-top: 10px;
+    }
+    .skill-item:nth-child(n+2) {
+        @include bpSp {
+            margin-top: 3.5%;
+        }
     }
     .skill-thumb {
         display: flex;
@@ -26,13 +43,18 @@
         align-items: center;
         width: 100px;
         @include bpSp {
-            width: auto;
+
         }
     }
     .skill-text {
         width: 100%;
         margin-left: 2%;
-        padding-right: 35px;
         text-align: left;
+        @include bpSp {
+            padding-right: 0;
+        }
+    }
+    .fa-li {
+        left: 0;
     }
 }

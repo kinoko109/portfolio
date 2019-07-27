@@ -5,8 +5,17 @@
 
 body {
     position: relative;
+    transition: .3s;
     &.bgSub3{
     background-color: black;
+    }
+    &.darkmode {
+        background-color: #000;
+        color: #fff;
+        transition: .3s;
+        a {
+            color: #fff;
+        }
     }
 }
 
@@ -34,19 +43,16 @@ body {
 //     }
 // }
 
-.sub-ttl {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 8%;
-    overflow: hidden;
-    text-align: center;
-}
-
 .ttl-lv2 {
     position: relative;
+    width: 200px;
+    margin: 0 auto 5%;
     font-size: 45px;
     letter-spacing: 4px;
+    text-align: center;
+    @include bpSp {
+        margin: 0 auto 12%;
+    }
     &::after {
         @include pseudoElement(0, 0);
         bottom: -5px;
@@ -57,9 +63,18 @@ body {
     &::after {
         transition: .6s;
         transition-delay: 1s;
-        @include pseudoElement(100%, 10px);
+        @include pseudoElement(100%, 5px);
         bottom: -5px;
         background-color: $black;
+        border-radius: 10px;
+    }
+}
+
+body.darkmode {
+    .ttl-lv2.draw-line {
+        &::after {
+            background-color: $white;
+        }
     }
 }
 
@@ -69,6 +84,9 @@ body {
 .about-sec,
 .work-sec{
     margin-top: 7%;
+    @include bpSp {
+        margin-top: 10%;
+    }
 }
 
 // *********

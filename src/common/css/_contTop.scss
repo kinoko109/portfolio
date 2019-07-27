@@ -27,18 +27,25 @@
     }
 }
 
-.content-top_scroll {
+.to-scroll {
     position: absolute;
     bottom: 10px;
     left: 50%;
     writing-mode: vertical-rl;
     cursor: pointer;
+    @include bpSp {
+        bottom: 37px;
+    }
     span::after {
         @include pseudoElement(0, 100%);
-        border: 1px solid $subColor2;
-        animation: scrlBounce 1s infinite ease-in-out;
+        border: 1px solid #000;
+        animation: scrlBounce 1.3s infinite ease-in-out;
+    }
+    @at-root body.darkmode & span::after {
+        border-color: #fff;
     }
 }
+
 
 @keyframes scrlBounce {
     0%,
@@ -46,6 +53,6 @@
         transform: translateY(0);
     }
     50% {
-        transform: translateY(10px);
+        transform: translateY(5px);
     }
 }
