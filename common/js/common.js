@@ -6,16 +6,19 @@ $(function(){
     var hideClass = 'js-hide',
         openClass = 'is-open',
         activeClass = 'is-active',
-        drawlineClass = 'draw-line';
+        drawlineClass = 'draw-line',
+        darkClass = 'darkmode';
 
     /**
      * element
      */
-    var $humBtn = $('.header-btn'),
+    var $body = $('body'),
+        $darkBtn = $('.js-darkbtn'),
+        $lightBtn = $('.js-lightbtn'),
+        $humBtn = $('.header-btn'),
         $humMenu = $('.nav'),
         $animationElm = $('.m-anime'),
         $subTtl = $('.ttl-lv2'),
-        $aboutContent2 = $('.about-2col'),
         $chaseNav = $('header');
 
     /**
@@ -33,6 +36,19 @@ $(function(){
         }, delay);
     });
 
+    /**
+     * テーマ色変更
+     */
+    $darkBtn.on('click', function() {
+        if($body.hasClass(darkClass)) {
+            return;
+        }
+        $body.addClass(darkClass);
+    });
+
+    $lightBtn.on('click', function() {
+        $body.removeClass(darkClass);
+    });
 
     /**
      * ハンバーガーメニュー
