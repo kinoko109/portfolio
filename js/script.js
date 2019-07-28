@@ -24,7 +24,7 @@ $(function(){
     /**
      * animationのdelay数値
      */
-     const delay = 500;
+     const delay = 300;
 
     /**
      * loading
