@@ -89,16 +89,17 @@
 .t-btn {
     width: 25px;
     height: 25px;
+    cursor: pointer;
     @include bpSp {
         width: 18px;
         height: 18px;
     }
 }
 .dark {
-    background-color: #000;
-    border: 1px solid #fff;
+    background-color: #222;
+    border: 1px solid #fdfdfd;
 }
 .light {
-    background-color: #fff;
-    border: 1px solid #000;
+    background-color: #fdfdfd;
+    border: 1px solid #222;
 }

@@ -4,19 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Portfolio t.m</title>
+    <title>Portfolio tatsuaki.matsuoka</title>
     <link rel="icon" href="/favicon.ico">
-    <!-- <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"> -->
     <script defer src="https://use.fontawesome.com/releases/v5.6.3/js/all.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Krona+One|Montserrat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/main.css">
-    <!-- <link rel="stylesheet" href="./common/css/common.css"> -->
-    <script src="./common/lib/js/jquery-3.4.1.js"></script>
-    <script src="./common/lib/js/bubbly-bg.js"></script>
-    <script src="./common/js/common.js"></script>
-    <script src="./js/top.js"></script>
-    <!-- <script src="./common/js/disp_include_html.js"></script> -->
+    <script src="./lib/jquery-3.4.1.js"></script>
+    <script src="./js/script.js"></script>
 </head>
 <body>
     <header id="header" class="l-header">
@@ -36,7 +31,7 @@
         </nav>
     </header>
 
-    <main class="wrap">
+    <main>
         <section class="content-top">
             <div class="top-ttl">
                 <h1 class="top-ttl-lv1 m-anime scale-up"><span class="top-ttl-txt">Portfolio</span>
@@ -49,7 +44,7 @@
             </div>
             <p class="to-scroll"><a href="#about"><span>scroll</span></a></p>
         </section>
-
+        <div class="wrap">
             <section id="about" class="about-sec">
                 <h2 class="ttl-lv2 m-anime move-up">about</h2>
                 <section class="about-me">
@@ -58,8 +53,7 @@
                         <div class="about-maintext m-anime move-up">
                             <p>2018年4月に新卒未経験で都内web制作会社に入社。<br>
                                 HTML5、CSS3、JavaScriptを使用し、主にブランディングサイトやキャンペーンサイト、コーポレートサイトの制作に携わりました。<br>
-                                また、PHPとSQLを用いたお問い合わせフォームと簡易的な管理画面の制作の経験もあります。<br>
-                                CMSではMovable Typeを使用し、コーポレートサイトとブランディングサイトの制作を経験してきました。
+                                また、PHPとSQLを用いたお問い合わせフォームと簡易的な管理画面の制作、CMSのMovable Typeを用いた、コーポレートサイトとブランディングサイトの制作を経験してきました。
                             </p>
                         </div>
                         <div class="aboutme-img m-anime move-up">
@@ -82,14 +76,14 @@
                                 <img src="./img/about-item02.png" alt="">
                             </div>
                             <p class="about-subttl">STORY</p>
-                            <p class="about-item_text">小説や漫画、映画、アニメなど物語性を感じるコンテンツが大好きです。物語は豊かな感情を得ることができ、また与えることができます。今後も多くの物語に触れユーザーに豊かな影響を与えられるコンテンツやサービスを生み出していきたいと考えています。</p>
+                            <p class="about-item_text">小説や漫画、映画、アニメなど物語性を感じるコンテンツが大好きです。物語は見る人に様々な体験を与えることができます。私も今後多くの物語に触れ、ユーザーに豊かな体験を与えられるコンテンツやサービスを生み出していきたいと考えています。</p>
                         </div>
                         <div class="about-item m-anime move-up">
                             <div class="about-img">
                                 <img src="./img/about-item03.png" alt="">
                             </div>
                             <p class="about-subttl">CLOTHES</p>
-                            <p class="about-item_text">大学生の時から古着に興味を持ち、大学2年生の春には友人と服飾サークルを立ち上げ様々な場所に足を運び、多くの人と交流しました。ファッションは人によって形や色などその人が持っているデザインを現わす一つの要素だと考えています。これからも色々なデザインを見て、学び、プロダクトに落とし込んでいけるようにしたいと思っています。</p>
+                            <p class="about-item_text">大学生の時から古着に興味を持ち、大学2年生の春には友人と服飾サークルを立ち上げました。ファッションは人によって形や色などその人が持っているデザインを現わす一つの要素だと考えています。色々なデザインを見て、学び、プロダクトに落とし込んでいけるようにしたいと考えています。</p>
                         </div>
                     </div>
                 </section>
@@ -106,7 +100,7 @@
                         <li class="skill-item fa-li m-anime move-up">
                             <div class="skill-thumb">
                                 <i class="fab fa-css3-alt fa-4x"></i>
-                               <p class="bold">CSS3</p>
+                            <p class="bold">CSS3</p>
                             </div>
                             <p class="skill-text">どのようなデザインでもブラウザ上で表現できるように、かつメンテナンス性を考慮したCSS設計やCSSアニメーションを使用したインタラクティブな表現にもつとめます。</p>
                         </li>
@@ -115,7 +109,7 @@
                                 <i class="fab fa-js-square fa-4x"></i>
                                 <p class="bold">JavaScript</p>
                             </div>
-                            <p class="skill-text">常に最新のJavaScriptの情報にアンテナを張るように心がけています。</p>
+                            <p class="skill-text">webサイトで用いられるできる常に最新のJavaScriptの情報にアンテナを張るようにしています。</p>
                         </li>
                         <li class="skill-item fa-li m-anime move-up">
                             <div class="skill-thumb">
@@ -143,7 +137,7 @@
             </section>
             <section id="work" class="work-sec">
                 <h2 class="ttl-lv2 m-anime move-up">work</h2>
-                <p class="txtC mgb3">これまでに携わってきたサイトをピックアップし、掲載します。</p>
+                <p class="txtC mgb3 m-anime move-up">これまでに携わってきたサイトをピックアップし、掲載します。</p>
                 <div>
                     <ul class="work-2col">
                         <li class="work-item m-anime move-up">
@@ -173,6 +167,7 @@
                     </ul>
                 </div>
             </section>
+        </div>
     </main>
 
     <footer class="l-footer">

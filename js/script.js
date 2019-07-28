@@ -3,7 +3,7 @@ $(function(){
     /**
      * class name
      */
-    var hideClass = 'js-hide',
+    const hideClass = 'js-hide',
         openClass = 'is-open',
         activeClass = 'is-active',
         drawlineClass = 'draw-line',
@@ -12,7 +12,7 @@ $(function(){
     /**
      * element
      */
-    var $body = $('body'),
+    const $body = $('body'),
         $darkBtn = $('.js-darkbtn'),
         $lightBtn = $('.js-lightbtn'),
         $humBtn = $('.header-btn'),
@@ -24,13 +24,13 @@ $(function(){
     /**
      * animationのdelay数値
      */
-     var delay = 500;
+     const delay = 500;
 
     /**
      * loading
      */
-    $(window).on('load', function (){
-        setTimeout(function() {
+    $(window).on('load',  () => {
+        setTimeout(() => {
             $('.l-loading').addClass(hideClass);
             $animationElm.eq(0).addClass(activeClass);
         }, delay);
@@ -39,21 +39,23 @@ $(function(){
     /**
      * テーマ色変更
      */
-    $darkBtn.on('click', function() {
+    $darkBtn.on('click', () => {
         if($body.hasClass(darkClass)) {
             return;
         }
         $body.addClass(darkClass);
+
+        return false;
     });
 
-    $lightBtn.on('click', function() {
+    $lightBtn.on('click', () => {
         $body.removeClass(darkClass);
     });
 
     /**
      * ハンバーガーメニュー
      */
-    $humBtn.on('click', function(){
+    $humBtn.on('click', () => {
         $(this).toggleClass(openClass);
 
         $humMenu.toggleClass(openClass);
@@ -64,11 +66,11 @@ $(function(){
     /**
      * animation class付与
      */
-    $(window).on('scroll load', function() {
-        var animeEleLen = $animationElm.length;
-        for (var i = 1; i < animeEleLen; i++) {
-            var animationElmWh = $animationElm[i].getBoundingClientRect().top;
-            var trigger = 80;
+    $(window).on('scroll load', () => {
+        let animeEleLen = $animationElm.length;
+        for (let i = 1; i < animeEleLen; i++) {
+            let animationElmWh = $animationElm[i].getBoundingClientRect().top;
+            const trigger = 80;
             //
             if (animationElmWh + trigger < window.innerHeight) {
                     $animationElm[i].classList.add(activeClass);
@@ -78,8 +80,8 @@ $(function(){
     });
 
     function subTtlAddClass() {
-        var subTtlLen = $subTtl.length;
-        for (var i = 0; i < subTtlLen; i++) {
+        let subTtlLen = $subTtl.length;
+        for (let i = 0; i < subTtlLen; i++) {
             if ($subTtl.eq(i).hasClass(activeClass)) {
                 $subTtl.eq(i).addClass(drawlineClass);
             }
@@ -89,25 +91,22 @@ $(function(){
     /**
      * スムーススクロール,ページトップ
      */
-    $('a[href^="#"]').on('click', function (){
-        var href = $(this).attr('href');
-
-        // ページ外リンクの場合
-        if (href.indexOf('/') > -1) return;
+    $('a[href^="#"]').on('click', function() {
+        const href = $(this).attr('href');
 
         smoothScroll(href);
         return false;
     });
 
     function smoothScroll (href) {
-        var speed = 500;
-        var elem = (href === '#' || href === '') ? 'html' : href;
-        var $target = $(elem);
+        const speed = 500;
+        const elem = (href === '#' || href === '') ? 'html' : href;
+        const $target = $(elem);
 
         // 対象要素がなかった場合
         if ($target.length == 0) return false;
 
-        var position = $target.offset().top;
+        const position = $target.offset().top;
 
         // 下層ページのローカルナビの高さを考慮
         $('html , body').not(':animated').animate({

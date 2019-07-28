@@ -12,19 +12,15 @@
 body {
     position: relative;
     transition: .3s;
-    &.bgSub3{
-    background-color: black;
-    }
     &.darkmode {
-        background-color: #000;
-        color: #fff;
+        background-color: #222;
+        color: #fdfdfd;
         transition: .3s;
         a {
-            color: #fff;
+            color: #fdfdfd;
         }
     }
 }
-
 
 .wrap {
     max-width: 1200px;
@@ -95,6 +91,7 @@ body.darkmode {
 .ttl-lv3 span {
     font-size: 1.8em;
     color: #fdb2a1;
+    text-shadow: 5px 5px 9px #222;
 }
 .about-sec,
 .work-sec{
