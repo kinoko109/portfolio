@@ -20,6 +20,7 @@ $(function(){
         $animationElm = $('.m-anime'),
         $subTtl = $('.ttl-lv2'),
         $chaseNav = $('header');
+        $loading = $('.l-loading');
 
     /**
      * animationのdelay数値
@@ -29,12 +30,13 @@ $(function(){
     /**
      * loading
      */
-    $(window).on('load',  () => {
+    let loadingDisp = () => {
         setTimeout(() => {
-            $('.l-loading').addClass(hideClass);
+            $loading.addClass(hideClass);
             $animationElm.eq(0).addClass(activeClass);
         }, delay);
-    });
+    };
+    loadingDisp();
 
     /**
      * テーマ色変更
