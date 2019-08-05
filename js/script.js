@@ -1,26 +1,42 @@
-const $animationElm = $('.m-anime'),
-      activeClass = 'is-active';
-
 $(function(){
 
     /**
      * class name
      */
-    const openClass = 'is-open',
-          drawlineClass = 'draw-line',
-          darkClass = 'darkmode';
+    const hideClass = 'js-hide',
+        openClass = 'is-open',
+        activeClass = 'is-active',
+        drawlineClass = 'draw-line',
+        darkClass = 'darkmode';
 
     /**
      * element
      */
     const $body = $('body'),
-          $darkBtn = $('.js-darkbtn'),
-          $lightBtn = $('.js-lightbtn'),
-          $humBtn = $('.header-btn'),
-          $humMenu = $('.nav'),
-          $subTtl = $('.ttl-lv2'),
-          $chaseNav = $('header');
-          $loading = $('.l-loading');
+        $darkBtn = $('.js-darkbtn'),
+        $lightBtn = $('.js-lightbtn'),
+        $humBtn = $('.header-btn'),
+        $humMenu = $('.nav'),
+        $animationElm = $('.m-anime'),
+        $subTtl = $('.ttl-lv2'),
+        $chaseNav = $('header');
+        $loading = $('.l-loading');
+
+    /**
+     * animationのdelay数値
+     */
+     const delay = 300;
+
+    /**
+     * loading
+     */
+    let loadingDisp = () => {
+        setTimeout(() => {
+            $loading.addClass(hideClass);
+            $animationElm.eq(0).addClass(activeClass);
+        }, delay);
+    };
+    loadingDisp();
 
     /**
      * テーマ色変更
@@ -90,31 +106,14 @@ $(function(){
         const $target = $(elem);
 
         // 対象要素がなかった場合
-        if ($target.length == 0) return;
+        if ($target.length == 0) return false;
 
         const position = $target.offset().top;
 
-        // ナビの高さを考慮
+        // 下層ページのローカルナビの高さを考慮
         $('html , body').not(':animated').animate({
             scrollTop : position - $chaseNav.innerHeight()
         }, speed, 'swing');
     }
 
 });
-
-
-    /**
-     * loading
-     */
-    let loadingDisp = () => {
-        const hideClass = 'js-hide';
-        const loadingDelay = 300;
-        setTimeout(() => {
-            $loading.addClass(hideClass);
-            $animationElm.eq(0).addClass(activeClass);
-        }, loadingDelay);
-    };
-
-    $(window).on('load', () => {
-        loadingDisp();
-    });
