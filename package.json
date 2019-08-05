@@ -17,7 +17,7 @@
     "parcel": "^1.12.3"
   },
   "scripts": {
-    "gulp": "gulp",
+    "build": "gulp watch",
     "parcel": "parcel",
     "babel": "gulp babel"
   },
